@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css.css">
+	</head>
+	<body class="norepeat">
+		<br><br><br><i>Click on image to continue...</i><br>
+		<a href="1-1-2-source-home-login.php" class="content">
+		<img class="mySlides" src="image-bus-01.png">
+		<img class="mySlides" src="image-bus-02.png">
+		<img class="mySlides" src="image-bus-03.png">
+		<img class="mySlides" src="image-bus-04.png">
+		<img class="mySlides" src="image-bus-05.png">
+		</a>		
+		<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				for (i = 0; i < x.length; i++) {
+				   x[i].style.display = "none";  
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex = 1}    
+				x[myIndex-1].style.display = "block";  
+				setTimeout(carousel, 2000); // Change image every 2 seconds
+			}
+		</script>
+		</div>
+	</body>
+</html>
